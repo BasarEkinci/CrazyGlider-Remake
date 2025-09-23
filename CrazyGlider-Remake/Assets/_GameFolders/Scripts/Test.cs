@@ -1,7 +1,9 @@
 ﻿using _GameFolders.Scripts.Managers;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using _GameFolders.Scripts.Controllers; 
+using _GameFolders.Scripts.Controllers;
+using _GameFolders.Scripts.Controllers.Plane;
+using _GameFolders.Scripts.Enums;
 
 namespace _GameFolders.Scripts
 {
@@ -26,7 +28,7 @@ namespace _GameFolders.Scripts
         }
 
         [EnumToggleButtons]
-        [SerializeField] private PlayerState playerStateToRaise = PlayerState.Idle;
+        [SerializeField] private PlayerState playerStateToRaise = PlayerState.Landed;
 
         [Button("Invoke Player State Changed", ButtonSizes.Large)]
         private void InvokePlayerStateChanged()

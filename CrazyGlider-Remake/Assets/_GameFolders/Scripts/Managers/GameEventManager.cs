@@ -1,5 +1,5 @@
 ﻿using System;
-using _GameFolders.Scripts.Controllers;
+using _GameFolders.Scripts.Enums;
 
 namespace _GameFolders.Scripts.Managers
 {
