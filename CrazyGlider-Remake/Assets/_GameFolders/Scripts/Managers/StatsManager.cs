@@ -50,12 +50,14 @@ namespace _GameFolders.Scripts.Managers
         {
             if (state == PlayerState.Flying)
             {
+                targetDistance.text = $" {2000f}";
                 _initialPosition = playerTransform.position;
                 _isFlying = true;
             }
             else if (state == PlayerState.Sink)
             {
                 _isFlying = false;
+                RaiseLevelFailed(_maxHeight,float.Parse(distanceText.text));
             }
         }
     }

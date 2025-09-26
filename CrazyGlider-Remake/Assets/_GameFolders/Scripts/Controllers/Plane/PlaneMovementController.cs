@@ -42,14 +42,14 @@ namespace _GameFolders.Scripts.Controllers.Plane
         {
             OnPlayerStateChanged += HandlePlayerState;
             OnLevelStart += () => _playerState = PlayerState.Accelerating; //move it start action
-            OnLevelComplete += () => _playerState = PlayerState.Landed; //move it to the landing controller
+            //OnLevelComplete += () => _playerState = PlayerState.Landed; //move it to the landing controller
         }
 
         private void OnDisable()
         {
             OnPlayerStateChanged -= HandlePlayerState;
             OnLevelStart -= () => _playerState = PlayerState.Accelerating;
-            OnLevelComplete -= () => _playerState = PlayerState.Landed;
+            //OnLevelComplete -= () => _playerState = PlayerState.Landed;
         }
 
         private void HandlePlayerState(PlayerState playerState)

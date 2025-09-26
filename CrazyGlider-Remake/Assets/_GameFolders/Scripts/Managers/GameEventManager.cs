@@ -6,28 +6,34 @@ namespace _GameFolders.Scripts.Managers
     public static class GameEventManager
     {
         public static event Action OnLevelStart;
-        public static event Action OnLevelComplete;
-        public static event Action OnLevelFailed;
+        public static event Action<float> OnLevelComplete;
+        public static event Action<float,float> OnLevelFailed;
         public static event Action<PlayerState> OnPlayerStateChanged;
+        public static event Action OnSkillActivated;
 
         public static void RaiseLevelStart()
         {
             OnLevelStart?.Invoke();
         }
 
-        public static void RaiseLevelComplete()
+        public static void RaiseLevelComplete(float maxHeight)
         {
-            OnLevelComplete?.Invoke();
+            OnLevelComplete?.Invoke(maxHeight);
         }
 
-        public static void RaiseLevelFailed()
+        public static void RaiseLevelFailed(float maxHeight, float currentHeight)
         {
-            OnLevelFailed?.Invoke();
+            OnLevelFailed?.Invoke(maxHeight, currentHeight);
         }
 
         public static void RaisePlayerStateChanged(PlayerState obj)
         {
             OnPlayerStateChanged?.Invoke(obj);
+        }
+
+        private static void RaiseSkillActivated()
+        {
+            OnSkillActivated?.Invoke();
         }
     }
 }
