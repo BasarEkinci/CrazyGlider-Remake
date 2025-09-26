@@ -103,8 +103,8 @@ namespace _GameFolders.Scripts.Controllers.Plane
 
             bool hasHit = Physics.SphereCast(origin, sphereRadius, Vector3.down, out RaycastHit hit, rayLength, groundMask);
             float slopeAngle = hasHit ? Vector3.Angle(hit.normal, Vector3.up) : 180f;
-
-            Vector3 inputDir = new Vector3(moveVector.x, 0f, moveVector.z);
+            float xInput = Mathf.Max(moveVector.x, 0f); // Plane can only move forward on the ground
+            Vector3 inputDir = new Vector3(xInput, 0f, moveVector.z);
 
             if (hasHit && slopeAngle <= maxSlopeAngle)
             {
