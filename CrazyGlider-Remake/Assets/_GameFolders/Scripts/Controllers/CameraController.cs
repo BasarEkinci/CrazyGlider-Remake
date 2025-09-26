@@ -62,6 +62,9 @@ namespace _GameFolders.Scripts.Controllers
                 case PlayerState.Landed:
                     _followOffset = baseOffset;
                     break;
+                case PlayerState.Sink:
+                    _followOffset = flyOffset;
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }

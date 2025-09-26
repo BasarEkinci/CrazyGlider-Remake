@@ -6,5 +6,7 @@
         Rolling,
         Flying,
         Landed,
+        Sink,
+        Crashed
     }
 }
