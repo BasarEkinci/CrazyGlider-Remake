@@ -1372,6 +1372,13 @@ MonoBehaviour:
   cliffOffset: {x: 0, y: 0, z: -30}
   flyOffset: {x: 0, y: 0, z: -15}
   smoothTime: 0.05
+  usePerAxisSmoothing: 1
+  smoothX: 0
+  smoothY: 0
+  smoothZ: 1
+  smoothTimeX: 0.15
+  smoothTimeY: 0.15
+  smoothTimeZ: 0.15
 --- !u!114 &1661837095
 MonoBehaviour:
   m_ObjectHideFlags: 0
