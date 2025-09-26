@@ -20,6 +20,7 @@ namespace _GameFolders.Scripts.Controllers
         private Vector3 _velocity;
         private PlayerState _playerState;
         private Vector3 _followOffset;
+        private bool _canFollow;
         private void OnEnable()
         {
             OnPlayerStateChanged += HandleCameraOffset;
@@ -32,6 +33,7 @@ namespace _GameFolders.Scripts.Controllers
 
         private void Start()
         {
+            _canFollow = true;
             if (target != null)
             {
                 _followOffset = transform.position - target.position;
@@ -40,7 +42,7 @@ namespace _GameFolders.Scripts.Controllers
 
         private void FixedUpdate()
         {
-            if (target == null) return;
+            if (target == null || !_canFollow) return;
             Vector3 desired = target.position + _followOffset;
             transform.position = Vector3.SmoothDamp(transform.position, desired, ref _velocity, smoothTime);
         }
@@ -52,6 +54,7 @@ namespace _GameFolders.Scripts.Controllers
             {
                 case PlayerState.Accelerating:
                     _followOffset = baseOffset;
+                    _canFollow = true;
                     break;
                 case PlayerState.Rolling:
                     _followOffset = cliffOffset;
@@ -63,7 +66,7 @@ namespace _GameFolders.Scripts.Controllers
                     _followOffset = baseOffset;
                     break;
                 case PlayerState.Sink:
-                    _followOffset = flyOffset;
+                    _canFollow = false;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

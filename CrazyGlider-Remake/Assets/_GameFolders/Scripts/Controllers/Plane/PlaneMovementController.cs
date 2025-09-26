@@ -8,7 +8,15 @@ namespace _GameFolders.Scripts.Controllers.Plane
     public class PlaneMovementController : MonoBehaviour
     {
         public float CurrentSpeed => moveSpeed * _inputVector.magnitude;
-
+        
+        [Header("Flight Settings")]
+        [SerializeField] private float maxPitchUp = 25f;
+        [SerializeField] private float maxPitchDown = 45f;
+        [SerializeField] private float pitchSpeed = 90f;
+        [SerializeField] private float autoPitchDown = 10f;
+        [SerializeField] private float autoPitchSpeed = 30f;
+        [SerializeField, Range(0f, 1f)] private float pitchDeadZone = 0.05f;
+        
         [Header("Movement Settings")]
         [SerializeField] private float moveSpeed = 10f;
         [SerializeField] private float groundOffset = 0.5f;
@@ -78,11 +86,13 @@ namespace _GameFolders.Scripts.Controllers.Plane
                     HandleMovement(new Vector3(1f, 0f, 0f));
                     break;
                 case PlayerState.Flying:
+                    HandleFlight(_inputVector);
                     break;
                 case PlayerState.Landed:
                     break;
                 case PlayerState.Sink:
                     _rb.linearVelocity = Vector3.zero;
+                    _rb.linearVelocity = Vector3.down;
                     break;
             }
         }
@@ -125,6 +135,34 @@ namespace _GameFolders.Scripts.Controllers.Plane
                     _rb.MoveRotation(Quaternion.Slerp(_rb.rotation, targetRot, alignSpeed * Time.fixedDeltaTime));
                 }
             }
+        }
+        
+        private void HandleFlight(Vector3 moveVector)
+        {
+            float v = moveVector.x;
+            float absV = Mathf.Abs(v);
+            
+            float targetPitch =
+                absV < pitchDeadZone
+                    ? autoPitchDown
+                    : Mathf.Lerp(-maxPitchUp, maxPitchDown, (v + 1f) * 0.5f);
+            
+            Vector3 euler = _rb.rotation.eulerAngles;
+            float currentPitch = NormalizeSignedAngle(euler.x);
+
+            float speed = absV < pitchDeadZone ? autoPitchSpeed : pitchSpeed;
+            float newPitch = Mathf.MoveTowards(currentPitch, targetPitch, speed * Time.fixedDeltaTime);
+            newPitch = Mathf.Clamp(newPitch, -maxPitchUp, maxPitchDown);
+            
+            Quaternion targetRot = Quaternion.Euler(newPitch, euler.y, 0f);
+            Quaternion next = Quaternion.RotateTowards(_rb.rotation, targetRot, speed * Time.fixedDeltaTime);
+            _rb.MoveRotation(next);
+        }
+
+        private static float NormalizeSignedAngle(float angle)
+        {
+            angle %= 360f;
+            return angle > 180f ? angle - 360f : angle;
         }
 
         private void Launch()

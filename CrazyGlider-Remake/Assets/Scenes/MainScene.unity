@@ -564,7 +564,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017166781}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -595,6 +595,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c37122a0b919437f8a36c900de063f7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxPitchUp: 25
+  maxPitchDown: 45
+  pitchSpeed: 45
+  autoPitchDown: 10
+  autoPitchSpeed: 30
+  pitchDeadZone: 0.05
   moveSpeed: 20
   groundOffset: 1
   alignSpeed: 10
@@ -1365,7 +1371,7 @@ MonoBehaviour:
   baseOffset: {x: 0, y: 0, z: -10}
   cliffOffset: {x: 0, y: 0, z: -30}
   flyOffset: {x: 0, y: 0, z: -15}
-  smoothTime: 0.02
+  smoothTime: 0.05
 --- !u!114 &1661837095
 MonoBehaviour:
   m_ObjectHideFlags: 0
