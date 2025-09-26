@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using _GameFolders.Scripts.Managers;
+using TMPro;
 using UnityEngine;
 using static _GameFolders.Scripts.Managers.GameEventManager;
 
@@ -23,7 +24,7 @@ namespace _GameFolders.Scripts.UI.Panels
         {
             distanceText.SetText($" {arg2:F}");
             maxHeightText.SetText($" {arg1:F}");
-            earnedCoinText.SetText($" {0f}");
+            earnedCoinText.SetText($" {CoinManager.Instance.GetEarnedCoins()}");
             skillText.SetText($" {0f}");
         }
     }

@@ -7,6 +7,10 @@ namespace _GameFolders.Scripts.Managers
     {
         public static event Action OnLevelStart;
         public static event Action<float> OnLevelComplete;
+        
+        /// <summary>
+        /// First float: max height, Second float: distance
+        /// </summary>
         public static event Action<float,float> OnLevelFailed;
         public static event Action<PlayerState> OnPlayerStateChanged;
         public static event Action OnSkillActivated;
@@ -21,9 +25,9 @@ namespace _GameFolders.Scripts.Managers
             OnLevelComplete?.Invoke(maxHeight);
         }
 
-        public static void RaiseLevelFailed(float maxHeight, float currentHeight)
+        public static void RaiseLevelFailed(float maxHeight, float distance)
         {
-            OnLevelFailed?.Invoke(maxHeight, currentHeight);
+            OnLevelFailed?.Invoke(maxHeight, distance);
         }
 
         public static void RaisePlayerStateChanged(PlayerState obj)
