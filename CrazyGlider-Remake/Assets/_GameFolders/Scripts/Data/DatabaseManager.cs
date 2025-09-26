@@ -1,12 +1,11 @@
 ﻿using System;
-using _GameFolders.Scripts.Extensions;
 using UnityEngine;
 
 namespace _GameFolders.Scripts.Data
 {
-    public class DatabaseManager : MonoSingleton<DatabaseManager>
+    public static class DatabaseManager
     {
-        public void SaveData<T>(string key, T data)
+        public static void SaveData<T>(string key, T data)
         {
             if (string.IsNullOrEmpty(key))
             {
@@ -30,7 +29,7 @@ namespace _GameFolders.Scripts.Data
             PlayerPrefs.Save();
         }
 
-        public T LoadData<T>(string key, T defaultValue = default)
+        public static T LoadData<T>(string key, T defaultValue = default)
         {
             if (string.IsNullOrEmpty(key))
             {
@@ -55,7 +54,7 @@ namespace _GameFolders.Scripts.Data
                 throw new NotSupportedException($"Type {type} is not supported by DatabaseManager");
         }
         
-        public void DeleteData(string key)
+        public static void DeleteData(string key)
         {
             if (string.IsNullOrEmpty(key))
             {
@@ -70,7 +69,7 @@ namespace _GameFolders.Scripts.Data
             }
         }
         
-        public void ClearAllData()
+        public static void ClearAllData()
         {
             PlayerPrefs.DeleteAll();
             PlayerPrefs.Save();
