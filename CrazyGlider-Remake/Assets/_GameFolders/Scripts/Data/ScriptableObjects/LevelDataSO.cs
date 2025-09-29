@@ -9,5 +9,6 @@ namespace _GameFolders.Scripts.Data.ScriptableObjects
     {
         [SerializeField] private List<LevelData> levels;
         public List<LevelData> Levels => levels;
+        public int LevelCount => levels.Count;
     }
 }
