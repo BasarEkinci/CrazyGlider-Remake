@@ -6,6 +6,7 @@ namespace _GameFolders.Scripts.Managers
 {
     public class GameManager : MonoSingleton<GameManager>
     {
+        public int CurrentLevelIndex => _currentLevelIndex;
         [SerializeField] private LevelDataSO levelDataSo;
         private int _currentLevelIndex;
         private void Start()
