@@ -3880,7 +3880,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1338095494}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 798518759}
+        m_TargetAssemblyTypeName: _GameFolders.Scripts.UI.PurchaseButtons.UpgradableItemButton,
+          Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1338095494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4477,7 +4490,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1462139024}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1730062088}
+        m_TargetAssemblyTypeName: _GameFolders.Scripts.UI.PurchaseButtons.UpgradableItemButton,
+          Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1462139024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6093,7 +6119,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2007923567}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 88023821}
+        m_TargetAssemblyTypeName: _GameFolders.Scripts.UI.PurchaseButtons.UpgradableItemButton,
+          Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2007923567
 MonoBehaviour:
   m_ObjectHideFlags: 0

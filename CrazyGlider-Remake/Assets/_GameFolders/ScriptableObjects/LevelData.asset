@@ -32,11 +32,14 @@ MonoBehaviour:
           icon: {fileID: 0}
       upgradableItem:
         speedUpgradeData:
-          speedMaxLevel: 4
+          speedMaxLevel: 3
           speedInitialPrice: 350
+          priceList: 5e010000c2010000bc020000
         fuelUpgradeData:
           fuelMaxLevel: 3
           fuelInitialPrice: 700
+          priceList: c201000058020000ee020000
         cliffUpgradeData:
           cliffMaxLevel: 5
           cliffInitialPrice: 450
+          priceList: 5e010000260200008a020000ee02000084030000

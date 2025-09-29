@@ -14,13 +14,16 @@ namespace _GameFolders.Scripts.UI.PurchaseButtons
         [SerializeField] private Color purchasedColor;
         [SerializeField] private Color defaultColor;
         
-        private int _initialPrice;
+        private int _currentPrice;
         private int _currentLevel;
         private List<Image> _levelImages;
+        private List<int> _priceList;
         
-        public void InitializeButtonValues(int initialPrice, int totalLevel)
+        public void InitializeButtonValues(int totalLevel,List<int> priceList)
         {
-            _initialPrice = initialPrice;
+            _priceList = priceList;
+            _currentPrice = priceList[0];
+            priceText.SetText($"{_currentPrice}");
             _levelImages = new List<Image>();
             _currentLevel = 0;
             for (int i = 0; i < totalLevel; i++)
@@ -30,17 +33,19 @@ namespace _GameFolders.Scripts.UI.PurchaseButtons
             }
         }
 
-        public void Upgrade(int newPrice)
+        public void Upgrade()
         {
             // Add spend money
             _currentLevel++;
-            if (_currentLevel <= _levelImages.Count)
+            if (_currentLevel < _levelImages.Count)
             {
                 _levelImages[_currentLevel - 1].color = purchasedColor;
-                priceText.SetText(newPrice.ToString());
+                _currentPrice = _priceList[_currentLevel];
+                priceText.SetText($"{_currentPrice}");
             }
-            else
+            else if (_currentLevel == _levelImages.Count)
             {
+                _levelImages[_currentLevel - 1].color = purchasedColor;
                 purchaseButton.interactable = false;
                 priceText.SetText("MAX");
             }
@@ -52,9 +57,9 @@ namespace _GameFolders.Scripts.UI.PurchaseButtons
             purchaseButton.interactable = true;
             foreach (var image in _levelImages)
             {
-                image.color = defaultColor;
+                Destroy(image.gameObject);
             }
-            priceText.SetText(_initialPrice.ToString());
+            priceText.SetText(_currentPrice.ToString());
         }
     }
 }

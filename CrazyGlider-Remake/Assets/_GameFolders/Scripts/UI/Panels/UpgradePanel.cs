@@ -21,16 +21,21 @@ namespace _GameFolders.Scripts.UI.Panels
         private void Start()
         {
             _currentLevel = GameManager.Instance.CurrentLevelIndex;
-            SetUpgradableItemButtonValues();
         }
 
         private void SetUpgradableItemButtonValues()
         {
             UpgradableItemData item = levelData.Levels[_currentLevel].upgradeData.upgradableItem;
-            speedUpgrade.InitializeButtonValues(item.speedUpgradeData.speedInitialPrice,item.speedUpgradeData.speedMaxLevel);
-            cliffUpgrade.InitializeButtonValues(item.cliffUpgradeData.cliffInitialPrice,item.cliffUpgradeData.cliffMaxLevel);
-            fuelUpgrade.InitializeButtonValues(item.fuelUpgradeData.fuelInitialPrice,
-                item.fuelUpgradeData.fuelMaxLevel);
+            speedUpgrade.InitializeButtonValues(item.speedUpgradeData.speedMaxLevel,item.speedUpgradeData.priceList);
+            cliffUpgrade.InitializeButtonValues(item.cliffUpgradeData.cliffMaxLevel,item.cliffUpgradeData.priceList);
+            fuelUpgrade.InitializeButtonValues(item.fuelUpgradeData.fuelMaxLevel,item.fuelUpgradeData.priceList);
+        }
+
+        private void ResetButtonValues()
+        {
+            speedUpgrade.ResetButtonValues();
+            cliffUpgrade.ResetButtonValues();
+            fuelUpgrade.ResetButtonValues();
         }
     }
 }

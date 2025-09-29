@@ -1,9 +1,7 @@
-﻿using _GameFolders.Scripts.Data.ValueObjects.DataHolders;
-
-namespace _GameFolders.Scripts.Data.ValueObjects
+﻿namespace _GameFolders.Scripts.Data.ValueObjects.DataHolders
 {
     [System.Serializable]
-    public struct LevelData
+    public class LevelData
     {
         public UpgradeData upgradeData;
     }
