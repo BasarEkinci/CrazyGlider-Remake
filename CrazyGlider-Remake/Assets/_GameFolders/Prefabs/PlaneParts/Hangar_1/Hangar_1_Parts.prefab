@@ -614,6 +614,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6195882122770248938}
+  - component: {fileID: -795255149988297541}
   m_Layer: 0
   m_Name: Hangar_1_Parts
   m_TagString: Untagged
@@ -641,6 +642,23 @@ Transform:
   - {fileID: 7747427566521951517}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-795255149988297541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9036276354117726321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9cbc02521e6452aa6c3cba403d2efbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  motor: {fileID: 1229175971545129037}
+  wings: {fileID: 8328350014961100961}
+  wheels: {fileID: 5917758494881350136}
+  cover: {fileID: 7071242768458685592}
+  tail: {fileID: 3135564902041336124}
 --- !u!1 &9180154382033168032
 GameObject:
   m_ObjectHideFlags: 0

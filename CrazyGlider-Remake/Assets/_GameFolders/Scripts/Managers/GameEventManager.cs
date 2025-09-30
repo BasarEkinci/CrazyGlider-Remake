@@ -14,6 +14,7 @@ namespace _GameFolders.Scripts.Managers
         public static event Action<float,float> OnLevelFailed;
         public static event Action<PlayerState> OnPlayerStateChanged;
         public static event Action OnSkillActivated;
+        public static event Action OnSpendMoney;
 
         public static void RaiseLevelStart()
         {
@@ -38,6 +39,11 @@ namespace _GameFolders.Scripts.Managers
         private static void RaiseSkillActivated()
         {
             OnSkillActivated?.Invoke();
+        }
+
+        public static void RaiseSpendMoney()
+        {
+            OnSpendMoney?.Invoke();
         }
     }
 }

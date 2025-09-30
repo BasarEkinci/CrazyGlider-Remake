@@ -1,7 +1,5 @@
 ﻿using _GameFolders.Scripts.Data.ScriptableObjects;
-using _GameFolders.Scripts.Data.ValueObjects.DataHolders;
-using _GameFolders.Scripts.Managers;
-using _GameFolders.Scripts.UI.PurchaseButtons;
+using _GameFolders.Scripts.UI.ShopButtons;
 using UnityEngine;
 
 namespace _GameFolders.Scripts.UI.Panels
@@ -15,27 +13,12 @@ namespace _GameFolders.Scripts.UI.Panels
         [SerializeField] private UpgradableItemButton speedUpgrade;
         [SerializeField] private UpgradableItemButton cliffUpgrade;
         [SerializeField] private UpgradableItemButton fuelUpgrade;
-        
-        private int _currentLevel;
 
-        private void Start()
-        {
-            _currentLevel = GameManager.Instance.CurrentLevelIndex;
-        }
-
-        private void SetUpgradableItemButtonValues()
-        {
-            UpgradableItemData item = levelData.Levels[_currentLevel].upgradeData.upgradableItem;
-            speedUpgrade.InitializeButtonValues(item.speedUpgradeData.speedMaxLevel,item.speedUpgradeData.priceList);
-            cliffUpgrade.InitializeButtonValues(item.cliffUpgradeData.cliffMaxLevel,item.cliffUpgradeData.priceList);
-            fuelUpgrade.InitializeButtonValues(item.fuelUpgradeData.fuelMaxLevel,item.fuelUpgradeData.priceList);
-        }
-
-        private void ResetButtonValues()
-        {
-            speedUpgrade.ResetButtonValues();
-            cliffUpgrade.ResetButtonValues();
-            fuelUpgrade.ResetButtonValues();
-        }
+        [Header("Purchasable Item Buttons")] 
+        [SerializeField] private PurchasableItemButton motorButton;
+        [SerializeField] private PurchasableItemButton wingsButton;
+        [SerializeField] private PurchasableItemButton coverButton;
+        [SerializeField] private PurchasableItemButton wheelsButton;
+        [SerializeField] private PurchasableItemButton tailButton;
     }
 }

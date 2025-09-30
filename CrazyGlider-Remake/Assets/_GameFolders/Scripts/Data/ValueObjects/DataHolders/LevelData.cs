@@ -3,6 +3,6 @@
     [System.Serializable]
     public class LevelData
     {
-        public UpgradeData upgradeData;
+        public ShopData shopData;
     }
 }

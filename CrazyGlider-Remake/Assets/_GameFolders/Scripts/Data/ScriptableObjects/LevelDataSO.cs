@@ -19,10 +19,10 @@ namespace _GameFolders.Scripts.Data.ScriptableObjects
         {
             foreach (var level in levels)
             {
-                UpgradeData data = level.upgradeData;
-                CreateUpgradableItemList(ref data.upgradableItem.speedUpgradeData.priceList, data.upgradableItem.speedUpgradeData.speedMaxLevel);
-                CreateUpgradableItemList(ref data.upgradableItem.cliffUpgradeData.priceList, data.upgradableItem.cliffUpgradeData.cliffMaxLevel);
-                CreateUpgradableItemList(ref data.upgradableItem.fuelUpgradeData.priceList, data.upgradableItem.fuelUpgradeData.fuelMaxLevel);
+                ShopData data = level.shopData;
+                CreateUpgradableItemList(ref data.speed.priceList, data.speed.maxLevel);
+                CreateUpgradableItemList(ref data.cliff.priceList, data.cliff.maxLevel);
+                CreateUpgradableItemList(ref data.fuel.priceList, data.fuel.maxLevel);
             }
             EditorUtility.SetDirty(this);
         }
