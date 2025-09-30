@@ -29,7 +29,7 @@ namespace _GameFolders.Scripts.Data.ScriptableObjects
 
         private void CreateUpgradableItemList(ref List<int> priceList,int maxLevel)
         {
-            if (maxLevel == 0)
+            if (maxLevel < 2)
                 return;
             
             if (priceList == null)
