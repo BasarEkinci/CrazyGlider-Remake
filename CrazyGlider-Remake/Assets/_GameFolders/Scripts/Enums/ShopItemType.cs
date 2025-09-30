@@ -1,11 +1,14 @@
 ﻿namespace _GameFolders.Scripts.Enums
 {
-    public enum ItemType
+    public enum ShopItemType
     {
         Motor,
         Wings,
         Wheels,
         Cover,
-        Tail
+        Tail,
+        Fuel,
+        Cliff,
+        Speed
     }
 }

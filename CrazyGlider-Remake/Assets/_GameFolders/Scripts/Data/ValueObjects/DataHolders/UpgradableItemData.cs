@@ -9,6 +9,6 @@ namespace _GameFolders.Scripts.Data.ValueObjects.DataHolders
         public int maxLevel;
         public int initialPrice;
         public List<int> priceList;
-        public List<ItemType> requiredPartsToUnlock;
+        public List<ShopItemType> requiredPartsToUnlock;
     }
 }

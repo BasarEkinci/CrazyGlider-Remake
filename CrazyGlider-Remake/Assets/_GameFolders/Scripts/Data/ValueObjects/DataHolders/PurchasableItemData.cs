@@ -9,6 +9,6 @@ namespace _GameFolders.Scripts.Data.ValueObjects.DataHolders
     {
         public int price;
         public Sprite icon;
-        public List<ItemType> requiredPartsToUnlock;
+        public List<ShopItemType> requiredPartsToUnlock;
     }
 }
