@@ -11,21 +11,26 @@ namespace _GameFolders.Scripts.Managers
     public class ShopManager : MonoSingleton<ShopManager>
     {
         public ShopData ShopData => _shopData;
+        public List<PlanePart> PurchasableParts => _purchasableParts;
         
         [SerializeField] private LevelDataSO levelDataSo;
         
         private ShopData _shopData;
+        private PlanePartHolder _planePartHolder;
+        private List<PlanePart> _purchasableParts;
         private int _currentLevelIndex;
         
         private void Start()
         {
             _currentLevelIndex = GameManager.Instance.CurrentLevelIndex;
             _shopData = levelDataSo.Levels[_currentLevelIndex].shopData;
+            _planePartHolder = levelDataSo.Levels[_currentLevelIndex].planePartHolder;
+            InitializePurchasableParts();
         }
 
-        public bool CanPurchase(List<PlanePart> requiredParts)
+        private void InitializePurchasableParts()
         {
-            return requiredParts.All(part => part.IsPurchased);
+            _purchasableParts = _planePartHolder.PlaneParts.Where(part => part).ToList();
         }
     }
 }

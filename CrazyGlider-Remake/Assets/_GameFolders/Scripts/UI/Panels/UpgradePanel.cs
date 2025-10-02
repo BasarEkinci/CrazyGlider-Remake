@@ -1,4 +1,5 @@
 ﻿using _GameFolders.Scripts.Data.ValueObjects.DataHolders;
+using _GameFolders.Scripts.Enums;
 using _GameFolders.Scripts.Managers;
 using _GameFolders.Scripts.UI.ShopButtons;
 using UnityEngine;
@@ -22,18 +23,35 @@ namespace _GameFolders.Scripts.UI.Panels
         private UpgradableItemData _speedData;
         private UpgradableItemData _cliffData;
         private UpgradableItemData _fuelData;
+        
+        private PurchasableItemData _motorData;
+        private PurchasableItemData _wingsData;
+        private PurchasableItemData _coverData;
+        private PurchasableItemData _wheelsData;
+        private PurchasableItemData _tailData;
 
         private void Start()
         {
             GetUpgradableItemData();
+            GetPurchasableItemData();
             InitializeUpgradableItemButtons();
+            InitializePurchasableParts();
         }
 
         private void InitializeUpgradableItemButtons()
         {
-            speedUpgrade.Initialize(_speedData.priceList[0], _speedData.maxLevel, _speedData.priceList, _speedData.requiredPartsToUnlock);
-            cliffUpgrade.Initialize(_cliffData.priceList[0], _cliffData.maxLevel, _cliffData.priceList, _cliffData.requiredPartsToUnlock);
-            fuelUpgrade.Initialize(_fuelData.priceList[0], _fuelData.maxLevel, _fuelData.priceList, _fuelData.requiredPartsToUnlock);
+            speedUpgrade.Initialize(_speedData.priceList[0], _speedData.maxLevel, _speedData.priceList,_speedData.requiredPartsToUnlock);
+            cliffUpgrade.Initialize(_cliffData.priceList[0], _cliffData.maxLevel, _cliffData.priceList);
+            fuelUpgrade.Initialize(_fuelData.priceList[0], _fuelData.maxLevel, _fuelData.priceList,_fuelData.requiredPartsToUnlock);
+        }
+
+        private void InitializePurchasableParts()
+        {
+            motorButton.Initialize(_motorData.price, _motorData.icon,ShopItemType.Motor);
+            wingsButton.Initialize(_wingsData.price, _wingsData.icon,ShopItemType.Wings);
+            coverButton.Initialize(_coverData.price, _coverData.icon,ShopItemType.Cover);
+            wheelsButton.Initialize(_wheelsData.price, _wheelsData.icon,ShopItemType.Wheels,_wheelsData.requiredPartsToUnlock);
+            tailButton.Initialize(_tailData.price, _tailData.icon,ShopItemType.Tail);
         }
         
         private void GetUpgradableItemData()
@@ -41,6 +59,16 @@ namespace _GameFolders.Scripts.UI.Panels
             _speedData = ShopManager.Instance.ShopData.speed;
             _cliffData = ShopManager.Instance.ShopData.cliff;
             _fuelData = ShopManager.Instance.ShopData.fuel;
+        }
+        
+        private void GetPurchasableItemData()
+        {
+            _fuelData = ShopManager.Instance.ShopData.fuel;
+            _motorData = ShopManager.Instance.ShopData.motor;
+            _wingsData = ShopManager.Instance.ShopData.wings;
+            _coverData = ShopManager.Instance.ShopData.cover;
+            _wheelsData = ShopManager.Instance.ShopData.wheels;
+            _tailData = ShopManager.Instance.ShopData.tail;
         }
     }
 }

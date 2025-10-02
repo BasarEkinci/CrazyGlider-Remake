@@ -16,37 +16,34 @@ MonoBehaviour:
   - planePartHolder: {fileID: 5341932277483715934, guid: a04b5f255e485154486831daaf6be1a0, type: 3}
     shopData:
       motor:
-        price: 4500
+        price: 4000
         icon: {fileID: 21300000, guid: 2a2d5a7e384426946999e7f3a30944ab, type: 3}
         requiredPartsToUnlock: 
       wings:
-        price: 3500
+        price: 4000
         icon: {fileID: 21300000, guid: e56b28af86dab734ab1c39a903d07e4f, type: 3}
         requiredPartsToUnlock: 
       tail:
-        price: 4000
+        price: 3500
         icon: {fileID: 21300000, guid: d1e3990f132e0be4cb5f957ce3fef370, type: 3}
         requiredPartsToUnlock: 
       wheels:
-        price: 3500
+        price: 3000
         icon: {fileID: 21300000, guid: d8a9731bbe638b249bd31aaeffae6a39, type: 3}
-        requiredPartsToUnlock: 000000000400000001000000
+        requiredPartsToUnlock: 000000000100000004000000
       cover:
-        price: 0
-        icon: {fileID: 0}
+        price: 2500
+        icon: {fileID: 21300000, guid: deca1f931efd9c54b936f0c7c53dfc1f, type: 3}
         requiredPartsToUnlock: 
       cliff:
         maxLevel: 5
-        initialPrice: 350
         priceList: c201000058020000ee020000b6030000b0040000
         requiredPartsToUnlock: 
       speed:
         maxLevel: 4
-        initialPrice: 450
         priceList: 5802000020030000e80300004c040000
         requiredPartsToUnlock: 
       fuel:
         maxLevel: 2
-        initialPrice: 350
         priceList: c201000058020000
         requiredPartsToUnlock: 

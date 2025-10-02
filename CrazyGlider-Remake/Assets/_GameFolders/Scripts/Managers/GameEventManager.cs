@@ -1,5 +1,6 @@
 ﻿using System;
 using _GameFolders.Scripts.Enums;
+using _GameFolders.Scripts.Items;
 
 namespace _GameFolders.Scripts.Managers
 {
@@ -14,7 +15,7 @@ namespace _GameFolders.Scripts.Managers
         public static event Action<float,float> OnLevelFailed;
         public static event Action<PlayerState> OnPlayerStateChanged;
         public static event Action OnSkillActivated;
-        public static event Action OnSpendMoney;
+        public static event Action<ShopItemType> OnSpendMoney;
 
         public static void RaiseLevelStart()
         {
@@ -41,9 +42,9 @@ namespace _GameFolders.Scripts.Managers
             OnSkillActivated?.Invoke();
         }
 
-        public static void RaiseSpendMoney()
+        public static void RaiseSpendMoney(ShopItemType planePart)
         {
-            OnSpendMoney?.Invoke();
+            OnSpendMoney?.Invoke(planePart);
         }
     }
 }

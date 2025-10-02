@@ -6362,7 +6362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priceText: {fileID: 1023571145}
-  warningText: {fileID: 0}
+  warningText: {fileID: 730666836}
   levelImage: {fileID: 6578333996637979853, guid: b33c52685d75af441b3d325ba71ab5f6, type: 3}
   levelImageParent: {fileID: 1550146781}
   purchasedColor: {r: 0, g: 1, b: 0.09055519, a: 1}
