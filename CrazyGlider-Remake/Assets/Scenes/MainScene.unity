@@ -3732,6 +3732,142 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682013922}
   m_CullTransparentMesh: 1
+--- !u!1 &730666834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 730666835}
+  - component: {fileID: 730666837}
+  - component: {fileID: 730666836}
+  m_Layer: 5
+  m_Name: WarningText (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &730666835
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730666834}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1242328832}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 190, y: -26.336006}
+  m_SizeDelta: {x: 627.72, y: 52.6729}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &730666836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730666834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Motor & Fuel Required!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30
+  m_fontSizeBase: 30
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &730666837
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730666834}
+  m_CullTransparentMesh: 1
 --- !u!1 &744340691
 GameObject:
   m_ObjectHideFlags: 0
@@ -4036,10 +4172,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72e07e7383043b5bbec616bb3bdc2f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelData: {fileID: 11400000, guid: 698ff020a26f00e4c9a23b673efdd247, type: 2}
   speedUpgrade: {fileID: 1242328833}
   cliffUpgrade: {fileID: 1997870814}
   fuelUpgrade: {fileID: 1641923075}
+  motorButton: {fileID: 0}
+  wingsButton: {fileID: 0}
+  coverButton: {fileID: 0}
+  wheelsButton: {fileID: 0}
+  tailButton: {fileID: 0}
 --- !u!1 &865494857
 GameObject:
   m_ObjectHideFlags: 0
@@ -4158,6 +4298,7 @@ Transform:
   - {fileID: 1735377107}
   - {fileID: 567286139}
   - {fileID: 865494858}
+  - {fileID: 1633205517}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &879841985
@@ -4690,6 +4831,142 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962415024}
+  m_CullTransparentMesh: 1
+--- !u!1 &1016332301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1016332302}
+  - component: {fileID: 1016332304}
+  - component: {fileID: 1016332303}
+  m_Layer: 5
+  m_Name: WarningText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1016332302
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016332301}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1641923074}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 190, y: -26.336006}
+  m_SizeDelta: {x: 627.72, y: 52.6729}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1016332303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016332301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Motor Required!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30
+  m_fontSizeBase: 30
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1016332304
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016332301}
   m_CullTransparentMesh: 1
 --- !u!1 &1017166781
 GameObject:
@@ -6064,6 +6341,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 88023818}
+  - {fileID: 730666835}
   m_Father: {fileID: 1966460690}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6083,12 +6361,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10913fba27eb444abaae7d46836e0a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  purchaseButton: {fileID: 2007923566}
-  levelImageParent: {fileID: 1550146781}
-  levelImage: {fileID: 6578333996637979853, guid: b33c52685d75af441b3d325ba71ab5f6, type: 3}
   priceText: {fileID: 1023571145}
-  purchasedColor: {r: 0, g: 0.7169812, b: 0.11809109, a: 1}
-  defaultColor: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
+  warningText: {fileID: 0}
+  levelImage: {fileID: 6578333996637979853, guid: b33c52685d75af441b3d325ba71ab5f6, type: 3}
+  levelImageParent: {fileID: 1550146781}
+  purchasedColor: {r: 0, g: 1, b: 0.09055519, a: 1}
+  defaultColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
 --- !u!1 &1246653956
 GameObject:
   m_ObjectHideFlags: 0
@@ -6311,9 +6589,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1641923075}
-        m_TargetAssemblyTypeName: _GameFolders.Scripts.UI.PurchaseButtons.UpgradableItemButton,
+        m_TargetAssemblyTypeName: _GameFolders.Scripts.UI.ShopButtons.UpgradableItemButton,
           Assembly-CSharp
-        m_MethodName: Upgrade
+        m_MethodName: Purchase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7794,6 +8072,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573431139}
   m_CullTransparentMesh: 1
+--- !u!1 &1633205516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1633205517}
+  - component: {fileID: 1633205518}
+  m_Layer: 0
+  m_Name: ShopManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1633205517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633205516}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 878240770}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1633205518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633205516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76053d89a2f14c8f9ffb7ec8636d71e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelDataSo: {fileID: 11400000, guid: 698ff020a26f00e4c9a23b673efdd247, type: 2}
 --- !u!1 &1641923073
 GameObject:
   m_ObjectHideFlags: 0
@@ -7823,6 +8146,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1016332302}
   - {fileID: 333021265}
   m_Father: {fileID: 1966460690}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7843,12 +8167,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10913fba27eb444abaae7d46836e0a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  purchaseButton: {fileID: 1276580354}
-  levelImageParent: {fileID: 1061103954}
-  levelImage: {fileID: 6578333996637979853, guid: b33c52685d75af441b3d325ba71ab5f6, type: 3}
   priceText: {fileID: 254991054}
-  purchasedColor: {r: 0, g: 0.7169812, b: 0.11809109, a: 1}
-  defaultColor: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
+  warningText: {fileID: 1016332303}
+  levelImage: {fileID: 6578333996637979853, guid: b33c52685d75af441b3d325ba71ab5f6, type: 3}
+  levelImageParent: {fileID: 1061103954}
+  purchasedColor: {r: 0, g: 1, b: 0.09638786, a: 1}
+  defaultColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
 --- !u!1 &1656179712
 GameObject:
   m_ObjectHideFlags: 0
@@ -8764,9 +9088,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1997870814}
-        m_TargetAssemblyTypeName: _GameFolders.Scripts.UI.PurchaseButtons.UpgradableItemButton,
+        m_TargetAssemblyTypeName: _GameFolders.Scripts.UI.ShopButtons.UpgradableItemButton,
           Assembly-CSharp
-        m_MethodName: Upgrade
+        m_MethodName: Purchase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9519,7 +9843,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 47.90515, y: -86.40231}
+  m_AnchoredPosition: {x: 47.90503, y: -86.40234}
   m_SizeDelta: {x: 1037.3, y: -289.3395}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1966460691
@@ -9597,12 +9921,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10913fba27eb444abaae7d46836e0a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  purchaseButton: {fileID: 1771806429}
-  levelImageParent: {fileID: 355359529}
-  levelImage: {fileID: 6578333996637979853, guid: b33c52685d75af441b3d325ba71ab5f6, type: 3}
   priceText: {fileID: 962415026}
-  purchasedColor: {r: 0, g: 0.7169812, b: 0.11809109, a: 1}
-  defaultColor: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
+  warningText: {fileID: 0}
+  levelImage: {fileID: 6578333996637979853, guid: b33c52685d75af441b3d325ba71ab5f6, type: 3}
+  levelImageParent: {fileID: 355359529}
+  purchasedColor: {r: 0, g: 1, b: 0.09392524, a: 1}
+  defaultColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
 --- !u!1 &2001907807
 GameObject:
   m_ObjectHideFlags: 0
@@ -9836,9 +10160,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1242328833}
-        m_TargetAssemblyTypeName: _GameFolders.Scripts.UI.PurchaseButtons.UpgradableItemButton,
+        m_TargetAssemblyTypeName: _GameFolders.Scripts.UI.ShopButtons.UpgradableItemButton,
           Assembly-CSharp
-        m_MethodName: Upgrade
+        m_MethodName: Purchase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

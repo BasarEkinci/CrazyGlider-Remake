@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using _GameFolders.Scripts.Enums;
 using UnityEngine;
 
 namespace _GameFolders.Scripts.Items
@@ -6,6 +6,6 @@ namespace _GameFolders.Scripts.Items
     public class PlanePart : MonoBehaviour
     {
         public bool IsPurchased;
-        public List<PlanePart> requiredPartsToUnlock;
+        public ShopItemType type;
     }
 }

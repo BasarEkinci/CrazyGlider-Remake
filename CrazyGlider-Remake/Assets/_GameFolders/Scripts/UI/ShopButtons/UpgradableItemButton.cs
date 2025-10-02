@@ -1,4 +1,6 @@
-﻿using _GameFolders.Scripts.Enums;
+﻿using System.Collections.Generic;
+using _GameFolders.Scripts.Enums;
+using _GameFolders.Scripts.Items;
 using _GameFolders.Scripts.Managers;
 using TMPro;
 using UnityEngine;
@@ -8,37 +10,66 @@ namespace _GameFolders.Scripts.UI.ShopButtons
 {
     public class UpgradableItemButton : MonoBehaviour
     {
-        public Transform LevelImageParent => levelImageParent;
-        
-        [SerializeField] private Transform levelImageParent;
+        [Header("UI References")]
         [SerializeField] private TMP_Text priceText;
         [SerializeField] private TMP_Text warningText;
+        [SerializeField] private Image levelImage;
+
+        [Header("Object References")] 
+        [SerializeField] private Transform levelImageParent;
+
+        [Header("Preferences")] 
         [SerializeField] private Color purchasedColor;
         [SerializeField] private Color defaultColor;
-
-        private int _maxLevel;
+        
         private int _price;
-        private Image _levelImage;
-        private ShopItemType _type;
-        private void InitializeButton(int price, int maxLevel,Image levelImage,ShopItemType type,bool canPurchasable = true)
+        private int _maxLevel;
+        private int _currentLevel;
+        private List<Image> _levelImages;
+        private List<ShopItemType> _requiredPartsToUnlock;
+        private List<int> _priceList;
+
+        public void Initialize(int price, int maxLevel,List<int> priceList, List<ShopItemType> requiredPartsToUnlock)
         {
-            _type = type;
+            _priceList = priceList;
             _price = price;
+            _requiredPartsToUnlock = requiredPartsToUnlock;
             _maxLevel = maxLevel;
-            _levelImage = levelImage;
-            priceText.SetText($"{_price}");
-            warningText.gameObject.SetActive(!canPurchasable);
-            GameEventManager.OnSpendMoney += OnSpendMoney;
+            _currentLevel = 0;
+            CreateLevelImage(_maxLevel);            
+            priceText.SetText(_price.ToString());
+            if(warningText != null)
+                warningText.gameObject.SetActive(requiredPartsToUnlock.Count > 0);
         }
 
         public void Purchase()
         {
+            /*if (CoinManager.Instance.GetTotalCoins() < _price)
+                return;*/
             
+            if (_currentLevel == _maxLevel - 1)
+            {
+                _levelImages[_currentLevel].color = purchasedColor;
+                priceText.SetText("MAX");
+            }
+            else if (_currentLevel < _maxLevel)
+            {
+                _currentLevel++;
+                _levelImages[_currentLevel - 1].color = purchasedColor;
+                _price = _priceList[_currentLevel];
+                priceText.SetText(_price.ToString());
+            }
         }
         
-        private void OnSpendMoney(ShopItemType type)
+        private void CreateLevelImage(int maxLevel)
         {
-            
+            _levelImages = new List<Image>();
+            for (int i = 0; i < maxLevel; i++)
+            {
+                Image image = Instantiate(levelImage, levelImageParent);
+                image.color = defaultColor;
+                _levelImages.Add(image);
+            }
         }
     }
 }

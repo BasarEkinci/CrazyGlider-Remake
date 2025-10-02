@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 1483406881869449207}
   - component: {fileID: 9012313292815698455}
   - component: {fileID: 7100056734332885282}
+  - component: {fileID: 541800590555078201}
   m_Layer: 0
   m_Name: Motor_1
   m_TagString: Untagged
@@ -259,6 +260,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &541800590555078201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229175971545129037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01080a45ff214582a8e5f9cfd9bfc980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPurchased: 0
+  requiredPartsToUnlock: []
+  type: 0
 --- !u!1 &3135564902041336124
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,6 +286,7 @@ GameObject:
   - component: {fileID: 6704337788311694711}
   - component: {fileID: 3684209061789150494}
   - component: {fileID: 4542191855859710382}
+  - component: {fileID: 5097535710958732}
   m_Layer: 0
   m_Name: Tail_1
   m_TagString: Untagged
@@ -345,6 +362,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5097535710958732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3135564902041336124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01080a45ff214582a8e5f9cfd9bfc980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPurchased: 0
+  requiredPartsToUnlock: []
+  type: 4
 --- !u!1 &5917758494881350136
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +388,7 @@ GameObject:
   - component: {fileID: 3373666541383944805}
   - component: {fileID: 2302058225629963269}
   - component: {fileID: 4997953697996700164}
+  - component: {fileID: 2597339061902264499}
   m_Layer: 0
   m_Name: Wheels_1
   m_TagString: Untagged
@@ -433,6 +466,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2597339061902264499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5917758494881350136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01080a45ff214582a8e5f9cfd9bfc980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPurchased: 0
+  requiredPartsToUnlock: []
+  type: 2
 --- !u!1 &7071242768458685592
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +492,7 @@ GameObject:
   - component: {fileID: 162244208137376313}
   - component: {fileID: 1908050976843235018}
   - component: {fileID: 1266476213089226806}
+  - component: {fileID: 3918621224885845991}
   m_Layer: 0
   m_Name: Cover_1
   m_TagString: Untagged
@@ -519,6 +568,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3918621224885845991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7071242768458685592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01080a45ff214582a8e5f9cfd9bfc980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPurchased: 0
+  requiredPartsToUnlock: []
+  type: 3
 --- !u!1 &8328350014961100961
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +594,7 @@ GameObject:
   - component: {fileID: 7747427566521951517}
   - component: {fileID: 3146839207436173666}
   - component: {fileID: 7813489530014753545}
+  - component: {fileID: 75934249842396437}
   m_Layer: 0
   m_Name: Wings_1
   m_TagString: Untagged
@@ -605,6 +670,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &75934249842396437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8328350014961100961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01080a45ff214582a8e5f9cfd9bfc980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPurchased: 0
+  requiredPartsToUnlock: []
+  type: 1
 --- !u!1 &9036276354117726321
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,7 +694,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6195882122770248938}
-  - component: {fileID: -795255149988297541}
+  - component: {fileID: 5341932277483715934}
   m_Layer: 0
   m_Name: Hangar_1_Parts
   m_TagString: Untagged
@@ -642,7 +722,7 @@ Transform:
   - {fileID: 7747427566521951517}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-795255149988297541
+--- !u!114 &5341932277483715934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -651,14 +731,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 9036276354117726321}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9cbc02521e6452aa6c3cba403d2efbf, type: 3}
+  m_Script: {fileID: 11500000, guid: 19280f6c878b4dfc980d1534103fffc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  motor: {fileID: 1229175971545129037}
-  wings: {fileID: 8328350014961100961}
-  wheels: {fileID: 5917758494881350136}
-  cover: {fileID: 7071242768458685592}
-  tail: {fileID: 3135564902041336124}
+  planeParts:
+  - {fileID: 3918621224885845991}
+  - {fileID: 541800590555078201}
+  - {fileID: 5097535710958732}
+  - {fileID: 2597339061902264499}
+  - {fileID: 75934249842396437}
 --- !u!1 &9180154382033168032
 GameObject:
   m_ObjectHideFlags: 0

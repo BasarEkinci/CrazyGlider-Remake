@@ -1,4 +1,3 @@
-using _GameFolders.Scripts.Items;
 using UnityEngine;
 
 namespace _GameFolders.Scripts.Data.ValueObjects.DataHolders
@@ -6,9 +5,6 @@ namespace _GameFolders.Scripts.Data.ValueObjects.DataHolders
     [System.Serializable]
     public class ShopData
     {
-        [Header("Hangar Items")]
-        public HangarItem hangarItem;
-        
         [Header("Purchasable Items")]
         public PurchasableItemData motor;
         public PurchasableItemData wings;
