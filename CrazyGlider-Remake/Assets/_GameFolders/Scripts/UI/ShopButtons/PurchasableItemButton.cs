@@ -34,10 +34,10 @@ namespace _GameFolders.Scripts.UI.ShopButtons
         public void Purchase()
         {
             //if (CoinManager.Instance.GetTotalCoins() < _price) return;
-            if (!CanPurchase()) return;
+            //if (!CanPurchase()) return;
             CoinManager.Instance.SpendCoins(_price);
             purchaseButton.interactable = false;
-            GameEventManager.RaiseSpendMoney(_type);
+            GameEventManager.RaiseItemPurchased(_type);
             priceText.SetText("PURCHASED");
         }
         

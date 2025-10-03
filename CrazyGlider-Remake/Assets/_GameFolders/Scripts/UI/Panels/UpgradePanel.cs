@@ -1,7 +1,10 @@
-﻿using _GameFolders.Scripts.Data.ValueObjects.DataHolders;
+﻿using System.Collections;
+using System.Threading.Tasks;
+using _GameFolders.Scripts.Data.ValueObjects.DataHolders;
 using _GameFolders.Scripts.Enums;
 using _GameFolders.Scripts.Managers;
 using _GameFolders.Scripts.UI.ShopButtons;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace _GameFolders.Scripts.UI.Panels
@@ -30,8 +33,9 @@ namespace _GameFolders.Scripts.UI.Panels
         private PurchasableItemData _wheelsData;
         private PurchasableItemData _tailData;
 
-        private void Start()
+        private IEnumerator Start()
         {
+            yield return null;
             GetUpgradableItemData();
             GetPurchasableItemData();
             InitializeUpgradableItemButtons();
